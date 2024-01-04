@@ -1,0 +1,707 @@
+*{
+    margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: Arial, Helvetica, sans-serif;
+
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(#009688 0%,#009688 130px,#d9dbd5 130px,#d9dbd5 100% );
+}
+.container{
+    position: relative;
+    width: 1488px;
+    max-width: 100%;
+    height: calc(100vh - 40px);
+    background: #fff;
+
+    box-shadow:0 1px  1px rgba(0,0,0,0.06),0 2px 5px 0 rgba(0,0,0,0.06);
+    display: flex;
+}
+.container .leftsohbet{
+    position: relative;
+flex: 30%;
+background: white;
+border-right: 1px solid rgba(0,0,0,0.02);
+overflow-y: auto;
+overflow-x: hidden;
+}
+.container .rightsohbet{
+    position: relative;
+    flex: 70%;
+    background: #e5ddd5;
+
+}
+.container .rightsohbet::before {
+    content: "";
+    position: absolute;
+    top: 0;
+left: 100;
+width: 100%;
+height: 100%;
+background: url("img/arkfon.png");
+opacity: 0.06;
+
+}
+.header{
+    position:  relative;
+width: 100%;
+height: 60px;
+background: #d9dbd5;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 0 15px;
+}
+.userfoto{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.cover{
+    position: absolute;
+    top: 0;
+left: 100;
+width: 100%;
+height: 100%;
+object-fit: cover;
+border-radius: 50%;
+
+}
+.icons{
+
+    display: flex;
+    margin-left: 220px;
+}
+.icons li{
+    display: flex;
+    list-style: none;
+    cursor: pointer;
+    color: #51585c;
+    font-size: 1.5em;
+    margin-left: 22px;
+    
+}
+.search-outline{
+    position: relative;
+    width: 100%;
+height: 50px;
+background: #f6f6f6;
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 0 15px ;
+}
+.search_chat div{
+width:100% ;
+}
+.search_chat div input{
+
+    width: 100%;
+    outline: none;
+
+background: #fff;
+padding:6px ;
+height:38px ;
+border-radius: 30px;
+font-size: 14px;
+padding-left: 40px;
+}
+
+.search_chat div input::placeholder{
+
+    color: #bbb;
+}
+.search_chat div ion-icon {
+    position: absolute;
+left: 15px;
+top: 69px;
+font-size: 1.2em;
+}
+.chatlist{
+    position: relative;
+    height: calc(100% - 100px);
+  overflow: auto;
+z-index: -1;
+}
+
+.contact {
+    position: relative;
+    height: 80px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid rgba(0,0,0, 0.06);
+
+
+  }
+
+  .contact.active {
+     background: #f5f5ff; 
+
+    
+  }
+ .contact:hover{
+    background: #f5f5ff;
+  
+
+ }
+
+
+
+
+
+  .contact img, .header_left img {
+    margin-left: 30px;
+    margin-top: 10px;
+
+  }
+
+  .messages p{
+    max-width: 150px;
+    color:  #aaa;
+    display: -webkit-box;
+   -webkit-line-clamp: 1;
+   font-size: 0.9em;
+   -webkit-box-orient: vertical;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   margin-top: -13px;
+}
+.messages b{
+    background-color: #06d755;
+    color: #fff;
+
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display:flex ;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.75em;
+    margin-left: 275px;
+}
+  .message_time{
+
+    font-size:0.75em ;
+    color: #aaa;
+    margin-left: 270px;
+
+
+  }
+  .message_time2{
+
+    font-size:0.75em ;
+    color: #06d755;
+    margin-left: 270px;
+
+
+  }
+
+
+  .name {
+    position: absolute;
+    top: 50%;
+    left: 100px;
+    margin-right: 20px;
+    transform: translateY(-50%);
+
+    margin-top: 0;
+    font-size: 16px;
+
+
+  }
+  .header2{
+    position:  relative;
+    width: 100%;
+    height: 60px;
+    background: #d9dbd5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0px;
+
+}
+.imgText .cover{
+    position: relative;    min-width: 45px;
+   height: 45px;
+   border-radius: 50%;
+   font-size: 0.75em;
+    display: flex;
+
+align-items: center;
+   color: #fff;
+width: 20%;
+
+
+}
+
+.imgText h4{
+
+
+
+    font-weight: 10;
+    line-height: 1.2em;
+    margin-left: 55px;
+    margin-top: -40px;
+}
+.imgText h4 span {
+    font-size: 0.8em;
+    color:#555 ;
+}
+
+
+  header img, .chat_list img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  .container_rightsohbet {
+    width: 70%;
+    height: 500px;
+    background: url("images/arkfon.png");
+    background-size: cover;
+    float:left;
+    position: relative;
+    background: purple;
+  }
+  .message_box.active, .message .message_options.active {
+    display: block;
+  }
+
+  .message_box {
+    height: 653px;
+    position: relative;
+    overflow-y: scroll;
+    padding: 0 50px;
+    display: none;
+    padding: 0 15px;
+  }
+  .message_box::after {
+    display: table;
+    content: " ";
+    clear: both;
+  }
+  .message_box {
+    width: 100%;
+    position: relative;
+  }
+
+
+  .message_box h6 {
+    float: right;
+    margin-right: 10px;
+    color: grey;
+    display: inline;
+  }
+  .message_box p {
+    color: black;
+    font-size: 15px;
+
+  }
+  .message_box i {
+    display: none;
+    color: grey;
+    float: right;
+    cursor: pointer;
+    z-index: 2;
+    position: absolute;
+    top: 80%;
+    right: 40px;
+    transform: translate(-50%);
+  }
+  .message_box:hover i {
+    display: block;
+
+  }
+
+
+  .message_box p {
+    position: relative;
+    right: 0;
+    text-align: left;
+  max-width: 460px;
+    padding: 9px;
+    background: #dcf8c6;
+    border-radius: 10px;
+    font-size: 0.9em;
+}
+.message_box .mymessage p::before{
+    content: "";
+position: absolute;
+top: 0;
+left: -12px;
+width: 20px;
+height: 20px;
+background: linear-gradient(225deg, #dcf8c6 , #dcf8c6 40% , transparent 70% );
+} .mymessage{
+
+    justify-content: flex-end;
+}
+.message_box p span {
+    display: block;
+    margin-top: 5px;
+    font-size: 0.85em;
+    opacity: 0.5;
+}.karsımessage{
+    justify-content: flex-start;
+}
+.karsımessage p {
+    background: #fff;
+    text-align: left;
+}
+ .message_box .karsımessage p::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -12px;
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(135deg, #fff , #fff , transparent 70% );
+    }
+
+  .mymessage {
+
+    border-radius: 10px;
+  background: #dcf8c6;
+    float: left;
+    clear: both;
+    margin-bottom: 15px;
+    margin-top: 10px;
+  }
+  .karsımessage {
+    margin-top: 2vw;
+    background: #fff;
+    border-radius: 10px;
+    max-width: 45%;
+    float: right;
+    clear: both;
+    margin-bottom: 15px;
+  }
+
+
+
+  .message_dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  .mesajyaz{
+    position: relative;
+    width: 100%;
+    height: 60px;
+    background: #f0f0f0;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+ }
+ .mesajyaz ion-icon {
+    cursor: pointer;
+    font-size: 1.8em;
+    color: purple;
+ }
+ .mesajyaz ion-icon.mico{
+    margin-right: 15px;
+ }
+ .mesajyaz input {
+position: relative;
+width: 90%;
+height: 45px;
+margin: 10px;
+border: none;
+outline: none;
+border-radius: 8px;
+font-size: 1em;
+ }
+ /* drop */
+
+.containerdrop{
+   width: 30px;
+   position: relative;
+ 
+}
+.click{
+  color: #51585c;
+  background-color: #d9dbd5;;
+   border-radius: 30px;
+  
+}
+.click:hover{
+   background-color:pink;
+}
+
+
+.click,.links{
+   padding: 12px;
+   font-size: 1.2em;
+   font-family:Arial, Helvetica, sans-serif;
+   border: none;
+   outline: none;
+   width: 50px;
+transition: 0.8s;
+color: #555;
+}
+.list{
+   position: absolute;
+   transform: scaleY(0);
+   transform-origin: top;
+   transition: 0.3s;
+   margin-left: -10em;
+}
+.newlist{
+   transform: scaleY(1);
+   z-index: 5;
+}
+.links{
+  position: initial;
+   background-color: #fff;
+width: 200px;
+}
+.links:hover{
+   background-color: crimson;
+   transform: scale(1.1);
+}
+
+.containerdrop2{
+  width: 70px;
+  position: relative;
+
+}
+.clickH{
+ color: #51585c;
+ background-color: #d9dbd5;;
+  border-radius: 30px;
+ 
+}
+.clickH:hover{
+  background-color:pink;
+}
+
+
+.clickH,.links{
+  padding: 0.3vw;
+  font-size: 1.2em;
+  font-family:Arial, Helvetica, sans-serif;
+  border: none;
+  outline: none;
+  width: 50px;
+transition: 0.8s;
+color: #555;
+}
+.list2{
+  position: absolute;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: 0.3s;
+  margin-left: -10em;
+}
+.newlist2{
+  transform: scaleY(1);
+  z-index: 5;
+}
+.links{
+ position: initial;
+  background-color: #f7f8fa;
+width: 230px;
+padding: 10px;
+text-align: left;
+}
+.links p{
+  margin-left: 10px;
+}
+.links:hover{
+  background-color: crimson;
+  transform: scale(1.1);
+}
+
+.box{
+  margin-top: 54vw;
+  margin-left: -1vw;
+  width: 28vw;
+  height: 58.3vw;
+  background-color: #fff;
+  padding: 10px;
+  position: absolute;
+  z-index: 10;
+  display: none;
+}
+
+ .btn:hover{
+   background-color:pink;
+ }
+ .btn{
+  padding: 10px;
+  font-size: 1.2em;
+  font-family:Arial, Helvetica, sans-serif;
+  border: none;
+  outline: none;
+  width: 50px;
+transition: 0.8s;
+color: #555;
+border-radius: 30px;
+background-color: #d9dbd5;
+}
+.okçık{
+  height: 30px;
+  width: 30px;
+ color: #f6f6f6;
+ margin-top: 4vw;
+ padding: 0;
+ 
+}
+.yenimesajhead{
+  height: 108px;
+  width: 28vw;
+  margin-left: -0.7vw;
+  margin-top: -0.5vw;
+  background-color: #008069;
+  position: fixed;
+}
+.yenisoh{
+  color: #fff;
+margin-top: -1.8vw;
+margin-left: 2.5vw;
+}
+.btn.okçıkbtn{
+  padding: 0;
+  background-color: #008069 ;
+  height: 0;
+}
+.kişilerdeara{
+  margin-top: 3.2vw;
+  position: absolute;
+}
+.boşdiv{
+  height: 85px;
+  width: 65px;
+  background-color: #fff;
+  cursor: pointer;
+}
+.boşdiv:hover{
+  background-color: #f5f5ff;
+}
+.yenimesgrup{
+  height: 4vw;
+  margin-top: 1vw;
+  border-radius: 30px;
+}
+.boşdiv p{
+
+ margin-left: 65px;
+ margin-top: -35px;
+ color: black;
+}
+.boşdiv  li{
+  color: #aaa;
+list-style: none;
+margin-top: -2.3vw;
+margin-left: 4vw;
+
+}
+.WHAT{
+
+  margin-left: 65px;
+  margin-top: -35px;
+  color: #008069 ;
+ }
+ /* topluluk */ 
+ .bo{
+  margin-top: 44vw;
+  margin-left: -1vw;
+  width: 28vw;
+  height: 48.3vw;
+  background-color: #fff;
+  padding: 10px;
+  position: absolute;
+  z-index: 10;
+  display: none;
+}
+.boşdiv2{
+  height: 30vw;
+  width:27vw;
+  background-color: #fff;
+  cursor: pointer;
+margin-top: 6vw;
+}
+.topluluklarile{
+  width: 27vw;
+  height: 20vw;
+}
+.topluluklariletanışbuton{
+  width: 10vw;
+  height: 3vw;
+  background-color: #008069;
+  color: #fff;
+  border-radius: 5px;
+ cursor: pointer;
+  margin-left: 9vw;
+
+}
+.profil{
+    
+  margin-top: 44vw;
+  margin-left: -1vw;
+  width: 28vw;
+  height: 48.3vw;
+  background-color: #fff;
+  padding: 10px;
+  position: absolute;
+  z-index: 10;
+  display: none;
+}
+.profilfoto{
+  height: 3.3vw;
+  width: 3.3vw;
+  border-radius: 3vw;
+}
+.boşprofildiv{
+  height: 15vw;
+  width: 28vw;
+  background-color: #fff;
+  margin-top: 6.5vw;
+  margin-left: -0.5vw;
+
+}
+.profilfotosubüyük{
+  height: 10vw;
+  width: 10vw;
+  border-radius: 5vw;
+  margin-left: 9vw;
+  margin-top: 2vw;
+  cursor: pointer;
+}
+.boşdiv3{
+  height: 7vw;
+  width:27vw;
+  background-color: #fff;
+  cursor: pointer;
+margin-top: 0vw;
+}.adınız{
+  color: #009688;
+  font-size: 0.9vw;
+margin-left: 2vw;
+
+}
+.adınız2{
+  color: black;
+  font-size: 0.9vw;
+margin-left: 2vw;
+
+}
+.kay{
+ 
+margin-left: 20vw;
+}
+.kay2{
+ margin-top: -5vw;
+  margin-left: 22vw;
+  }
+.gri{
+  color: #aaa;
+}
